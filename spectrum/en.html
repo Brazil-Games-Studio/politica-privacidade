@@ -24,110 +24,292 @@
     <p class="lang">Language: <a href="index.html">Português</a> · <strong>English</strong> · <a href="../index.html">← Policies</a></p>
   </header>
 
-  <p class="muted"><strong>Last updated:</strong> August 24, 2026</p>
+  <p class="muted"><strong>Last updated:</strong> September 7, 2026</p>
 
   <p>
     This Privacy Policy explains how the game <strong>SPECTRUM</strong> ("app",
     "game", "we"), developed by <strong>Brazil Games Studio</strong>, handles the
     information of its players. SPECTRUM is a black-and-white endless runner for
     Android (package <code>org.brazilgamesstudio.spectrum</code>).
+    Brazil Games Studio is responsible for processing data in the game services
+    under its control; third-party services also have their own policies,
+    listed below.
   </p>
 
   <p>
-    In short: <strong>the game works with no sign-up, no login and no email.</strong>
-    We do not collect your real name, phone number, contacts, photos or precise
-    location. The only data that leaves your device is what's needed for the
-    optional online ranking and for ads.
+    In short: <strong>you can play solo without creating a game account.</strong>
+    Participating in online leaderboards and Versus uses an optional account
+    with a nickname and recovery code, without asking for your personal email
+    or a Google account login. Online features, ads, purchases and support
+    requests may involve data processing. The Google account used for
+    Google Play purchases is separate from your game account.
   </p>
+
+  <div class="card">
+    <strong>Want to delete your SPECTRUM account or data?</strong>
+    <p><a href="#delete-account">See how to request account and data deletion</a>.
+      You do not need to have the game installed to start a request.</p>
+  </div>
 
   <h2>1. What data the game handles</h2>
 
-  <h3>1.1 Online ranking (optional)</h3>
+  <h3>1.1 Game account and online leaderboards</h3>
   <p>
-    If you play while connected to the internet, the game sends your run to an
-    online leaderboard hosted on <strong>Google Firebase (Realtime Database)</strong>.
-    In that case, the following is handled:
+    Online features use <strong>Google Firebase Authentication</strong> and
+    <strong>Firebase Realtime Database</strong>. Viewing leaderboards without
+    creating a game account may create an anonymous technical Firebase session.
+    To submit scores, you must choose <strong>CREATE ACCOUNT</strong> or restore
+    an existing account. Merely being connected does not enable score submission
+    for a player without a game account.
   </p>
   <table>
-    <tr><th>Data</th><th>Purpose</th></tr>
-    <tr><td>The nickname you choose (up to 12 characters)</td><td>Show who is on the leaderboard</td></tr>
-    <tr><td>Run distance, steps and coins</td><td>Rank the board and check the score is physically possible (anti-cheat)</td></tr>
-    <tr><td>Game account identifier (derived from a random code generated on your device)</td><td>Tell your score apart from other players'</td></tr>
+    <tr><th scope="col">Data</th><th scope="col">Purpose</th></tr>
+    <tr><td>Your chosen nickname and name reservation; entered names have up to 12 characters and may receive a suffix to avoid duplicates</td><td>Identify the player on leaderboards and allow nickname changes</td></tr>
+    <tr><td>Firebase user identifier, technical credentials derived from the recovery code and authentication tokens</td><td>Authenticate, protect and recover the game account</td></tr>
+    <tr><td>Run distance, simulation steps and coins earned during a run</td><td>Record scores and check whether a run is plausible; steps refer to the game simulation, not a pedometer</td></tr>
+    <tr><td>Leaderboard period or daily challenge date</td><td>Separate global, weekly, monthly and daily challenge results</td></tr>
   </table>
-  <p class="muted">
-    The identifier comes from a random <em>recovery code</em> generated on your
-    device (you can save it to restore your account on another phone). It's a
-    random code, <strong>not linked to your identity</strong> or your Google
-    account. The nickname is chosen by you and is public on the leaderboard.
+  <p>
+    The eight-character recovery code is an <strong>access credential</strong>.
+    The game uses it to form a technical email-shaped identifier and an
+    authentication password for Firebase; it is not your personal email.
+    This data identifies an account pseudonymously and must not be treated as
+    completely anonymous. <strong>Keep the code safe and do not share it.</strong>
+    It does not appear on leaderboards.
+  </p>
+  <p>
+    Nicknames and scores are public on leaderboards; accessible records also
+    contain technical identifiers and run data. Avoid using your real name,
+    phone number or other personal information in a nickname. With an active
+    account, offline runs may remain in a local queue for later submission,
+    including when you reopen the game.
+  </p>
+  <p>
+    Firebase may also process IP addresses, connection client information and
+    technical logs for authentication, security and abuse prevention.
   </p>
 
-  <h3>1.2 Ads</h3>
+  <h3>1.2 Versus and invitations</h3>
   <p>
-    The game shows ads through <strong>Google AdMob</strong>. For that, AdMob may
-    collect and use the <strong>Android advertising ID</strong> and technical device
-    information (model, OS, language, ad interactions) to serve and measure ads.
-    This data is processed by Google under its own policy (link in section 4).
+    When you create or join a duel, Firebase receives participant identifiers,
+    nicknames, character appearance with equipped cosmetics, the invitation
+    code, creation and joining times, game version and technical match data,
+    and each player's results: distance, simulation steps and run coins.
+  </p>
+  <p>
+    Anyone who knows the invitation code and accesses the service can view
+    match data; do not treat it as a private conversation. The six-character
+    invitation code is different from your account recovery code.
+    <strong>COPY</strong> puts the invitation code on your device's clipboard;
+    you decide whom to send it to in another app. The game does not read your
+    address book or send messages to your contacts.
   </p>
 
-  <h3>1.3 "Remove ads" purchase</h3>
+  <h3>1.3 Ads and privacy choices</h3>
   <p>
-    The purchase to remove ads is processed by <strong>Google Play</strong> (Play
-    Billing). We do <strong>not</strong> receive or store payment data (card, etc.)
-    — that stays with Google.
+    The game uses <strong>Google AdMob</strong> and the <strong>Google UMP</strong>
+    consent platform. These services may process IP addresses (including to
+    estimate approximate location), the Android advertising ID, app set
+    identifiers and other applicable identifiers, device and system information,
+    app and ad interactions, and diagnostic or performance data. Purposes include
+    serving and measuring ads, analyzing operation and preventing fraud,
+    depending on the service and identifier used.
+  </p>
+  <p>
+    In <strong>OPTIONS → ADS</strong>, you can revisit the choice between
+    <strong>ACCEPT PERSONALIZED</strong> and <strong>ESSENTIAL ONLY</strong>.
+    The latter requests non-personalized ads; <strong>it does not mean no ads
+    or no technical data processing</strong>. Google may show its own consent
+    form where applicable. You can also reset or delete your advertising ID
+    through the controls available in Android settings.
+  </p>
+  <p>
+    Rewarded ads require the player's choice. Test versions may use demo ads,
+    but that does not eliminate technical data processing by the integrated
+    services.
   </p>
 
-  <h3>1.4 Data that stays only on your device</h3>
+  <h3>1.4 In-app purchases</h3>
   <p>
-    High score, coins, settings (sound, language), mission progress and an internal
-    game key are stored <strong>locally</strong> on the device and are
-    <strong>not sent</strong> to us. They are deleted when you uninstall the game.
+    Coin packs are processed through <strong>Google Play Billing</strong>.
+    The game also recognizes compatible previous purchases, including the
+    ad-removal entitlement. The integration handles product identifiers,
+    prices and offers, purchase status and transaction tokens to deliver
+    products, acknowledge or consume purchases and query recoverable
+    entitlements. Purchase data is not published on leaderboards or sent by
+    the game to the Firebase score database.
+  </p>
+  <p>
+    We do not receive full card details, banking credentials or your Google
+    account password. Payments and purchase history held by Google Play follow
+    Google's rules and policy. <strong>Joining a closed test does not
+    automatically make purchases free</strong>; purchases without charges
+    require the appropriate Google Play testing setup and test payment
+    instrument.
+  </p>
+
+  <h3>1.5 Local progress, achievements and backups</h3>
+  <p>
+    Your device stores sound, language, control and privacy settings, coin
+    balance, power-up and cosmetic inventory, missions, statistics, achievements,
+    local high score, game credentials, queued scores and duel references.
+    There are exceptions to local storage: scores and run data are sent to
+    leaderboards when you have an account, and equipped appearance is shared
+    in duels, as explained above.
+  </p>
+  <p>
+    Current achievements are local medals, without coin rewards and
+    <strong>without Google Play Games or Firebase synchronization</strong>.
+    Recovering a game account using its code restores its nickname and online
+    high score; it does not restore coin balance, inventory, missions or the
+    full achievement history. Recoverable purchase entitlements are queried
+    separately through Google Play.
+  </p>
+  <p>
+    The app allows <strong>Android data backup and transfer</strong>.
+    Depending on the device and user settings, the operating system may include
+    local files in backups or transfer them to another device. Therefore,
+    we do not promise that uninstalling the game deletes every copy or prevents
+    future restoration.
+  </p>
+
+  <h3>1.6 Support contact and access to this page</h3>
+  <p>
+    If you contact us, we process your email address, provided name, message
+    and any attachments to respond, identify your request and address your
+    rights. Send only what is necessary; do not send passwords, card details
+    or your account recovery code.
+  </p>
+  <p>
+    This policy is hosted on <strong>GitHub Pages</strong>. When you visit it,
+    GitHub may process IP addresses and technical connection and browser
+    information to provide and protect the site. These pages do not include
+    our own advertising or visitor analytics scripts.
   </p>
 
   <h2>2. How we use the data</h2>
   <ul>
-    <li>Operate the online ranking (global, weekly and revived runs);</li>
-    <li>Prevent fraudulent scores (run validation);</li>
-    <li>Serve and measure ads;</li>
-    <li>Process the optional "remove ads" purchase.</li>
+    <li>Provide the optional account, authentication, recovery and global, weekly, monthly and daily challenge leaderboards;</li>
+    <li>Operate Versus invitations, matches and results;</li>
+    <li>Maintain local progress and player preferences;</li>
+    <li>Check scores and prevent abuse or fraud;</li>
+    <li>Serve and measure ads, respecting applicable choices and requirements;</li>
+    <li>Process purchases and recoverable entitlements through Google Play;</li>
+    <li>Respond to support and data requests.</li>
   </ul>
-  <p>We do not sell your data and do not use ranking data for advertising.</p>
+  <p>
+    These purposes relate to providing the features you request, securing
+    services and meeting applicable obligations. Where consent is required,
+    it must be obtained through the corresponding flow. We do not sell your
+    data or use leaderboard or duel data to personalize ads.
+  </p>
 
   <h2>3. Who data is shared with</h2>
   <p>
-    Only with providers needed to run the game: <strong>Google Firebase</strong>
-    (ranking and anonymous identification), <strong>Google AdMob</strong> (ads) and
-    <strong>Google Play</strong> (purchases). Your nickname and distance appear
-    publicly on the leaderboard, inside the game and on a public leaderboard website,
-    if available.
+    We use <strong>Google Firebase</strong> for authentication, leaderboards and
+    Versus, <strong>Google AdMob and UMP</strong> for ads and consent,
+    <strong>Google Play</strong> for purchases, and <strong>GitHub Pages</strong>
+    for this policy. Support data is also processed by the email service used
+    to handle requests.
+  </p>
+  <p>
+    Other players can access public leaderboard data and view duels using
+    invitations. Data may also be provided where necessary to comply with
+    a legal obligation or a valid order from a competent authority.
+    Providers may process data in other countries; the safeguards and
+    conditions described in those services' policies and terms apply.
   </p>
 
   <h2>4. Third-party services</h2>
   <ul>
     <li>Google (Firebase, AdMob, Play) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-    <li>How Google uses data from apps that use its services — <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+    <li>Firebase — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy, security and data retention</a></li>
+    <li>AdMob — <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener">Data handled by the ads SDK</a></li>
+    <li>How Google uses data from partner apps — <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Data use in partner services</a></li>
+    <li>GitHub — <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a></li>
   </ul>
 
-  <h2>5. Retention and deletion</h2>
+  <h2>5. Retention, rights and deletion</h2>
+  <h3>5.1 Local data</h3>
   <p>
-    Local data is gone when you uninstall the game. Ranking data (nickname + score +
-    anonymous ID) stays on Firebase while the leaderboard exists. Since there is no
-    login, to request <strong>removal of your score from the ranking</strong>,
-    contact us (section 8) with the nickname you used; we'll locate and delete the
-    record.
+    You can remove installation data through Android storage settings or by
+    uninstalling the game. Backups and transferred copies must be managed
+    through the operating system or the responsible provider.
+    <strong>Clearing data or uninstalling does not delete your Firebase account
+    or online records</strong>, or purchase history held by Google Play.
+  </p>
+  <h3>5.2 Online data</h3>
+  <p>
+    Authentication data, profiles, nickname reservations, leaderboards and duels
+    remain in online services until requested deletion or administrative
+    cleanup. The end of a leaderboard period or expiration of an invitation
+    does not automatically erase its records. Support records are retained
+    to handle and follow up on requests and any applicable obligations.
+  </p>
+  <p>
+    Providers' technical logs, backups and purchase records may have their own
+    retention periods, described in the policies in section 4. A request to
+    the studio covers data under our control; it does not delete your Google
+    or GitHub account or records those providers must retain independently
+    of the game.
+  </p>
+  <h3 id="delete-account">5.3 Request account and data deletion</h3>
+  <div class="card">
+    <p><strong>SPECTRUM — Brazil Games Studio</strong></p>
+    <p><a href="mailto:brazilgamesstudio@gmail.com?subject=SPECTRUM%20-%20Account%20and%20data%20deletion">Request deletion by email</a></p>
+    <p>You can also write directly to
+      <a href="mailto:brazilgamesstudio@gmail.com">brazilgamesstudio@gmail.com</a>,
+      with the subject <strong>SPECTRUM — Account and data deletion</strong>.</p>
+  </div>
+  <ol>
+    <li>Include your in-game nickname, including any suffix, and whether you want to delete the entire account or request deletion of specific data.</li>
+    <li>Do not send passwords, payment details or your recovery code. We may request minimal information to confirm ownership and prevent someone else's account from being deleted.</li>
+    <li>We will reply by email to confirm the request, clarify its scope and explain the applicable timeframe. Deletion is not instant and will be handled within the deadlines required by applicable law.</li>
+  </ol>
+  <p>
+    Account deletion covers the Firebase authentication identity, profile,
+    nickname reservations, scores and player-associated duel data, not just
+    removal of one leaderboard entry. If retention is necessary for legal
+    obligations, security or fraud prevention, we will explain which data
+    is retained, why and for how long.
+  </p>
+  <p>
+    You do not need to reinstall the game to start a request. If you do not
+    remember your nickname or no longer have app access, explain the situation
+    in your email. In the game, this page is available through
+    <strong>OPTIONS → ADS → privacy policy</strong>. The current process is a
+    support request, not automatic deletion inside the app.
+  </p>
+  <p>
+    Account deletion prevents recovery and does not constitute a purchase
+    refund. Payment requests follow Google Play's channels and rules.
+    You can also contact us to request confirmation of processing, access,
+    correction and other rights under Brazil's LGPD and applicable law,
+    including withdrawal of consent where relevant.
   </p>
 
   <h2>6. Children</h2>
   <p>
-    SPECTRUM is not directed at children under 13 and does not request personal data.
-    If you are a guardian and believe a child submitted data (for example, a
-    nickname) to the ranking, contact us so we can remove it.
+    SPECTRUM is not directed at children under 13. We do not request your legal
+    name, personal email, phone number, contacts, photos or precise location
+    to play; this does not eliminate the processing of identifiers and other
+    data described in this policy. If you are a guardian and believe a child
+    provided data to the game, contact us for assistance and deletion.
   </p>
 
   <h2>7. Security and changes</h2>
   <p>
-    We take reasonable measures to protect data, but no system is 100% secure. We may
-    update this policy; the date at the top shows the latest version. Material changes
-    will be reflected on this same page.
+    Communications with integrated online services use HTTPS/TLS.
+    Firebase uses authentication and access rules to protect operations;
+    leaderboard and invitation data remain accessible as described in
+    this policy. We do not promise absolute anonymity, end-to-end encryption
+    or 100% security. Protect your device and recovery code.
+  </p>
+  <p>
+    We may update this policy to reflect actual changes to the game and its
+    services. The date at the top indicates the latest update. Where changes
+    require fresh consent, it must be requested through the appropriate flow,
+    not assumed merely because this page has been updated.
   </p>
 
   <h2>8. Contact</h2>
