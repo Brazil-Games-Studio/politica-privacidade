@@ -24,7 +24,7 @@
     <p class="lang">Idioma: <strong>Português</strong> · <a href="en.html">English</a> · <a href="../index.html">← Políticas</a></p>
   </header>
 
-  <p class="muted"><strong>Última atualização:</strong> 7 de setembro de 2026</p>
+  <p class="muted"><strong>Última atualização:</strong> 16 de outubro de 2026</p>
 
   <p>
     Esta Política de Privacidade explica como o jogo <strong>SPECTRUM</strong>
@@ -37,45 +37,62 @@
   </p>
 
   <p>
-    Em resumo: <strong>você pode jogar solo sem criar uma conta de jogo.</strong>
-    Para participar do ranking online e do Versus, existe uma conta opcional
-    com apelido e código de recuperação, sem pedir seu e-mail pessoal ou login
-    na conta Google. Os recursos online, anúncios, compras e contatos com o
-    suporte podem envolver tratamento de dados. A conta Google usada pelo
-    Google Play para compras é distinta da conta de jogo.
+    Em resumo: <strong>você pode jogar solo sem entrar com uma conta Google.</strong>
+    Com conexão, o jogo cria sozinho uma conta de convidado no serviço de contas
+    do <strong>Hipercombo</strong> (<code>hipercombo.com.br</code>), com um
+    apelido, sem pedir seu e-mail pessoal; ela é usada pelo ranking online e pelo
+    Versus. Entrar com o Google é opcional e liga o jogo à sua conta Hipercombo,
+    com o progresso salvo na nuvem. Os recursos online, anúncios, compras e
+    contatos com o suporte podem envolver tratamento de dados. A conta Google
+    usada pelo Google Play para compras é distinta da conta de jogo.
   </p>
 
   <div class="card">
     <strong>Quer excluir sua conta ou seus dados do SPECTRUM?</strong>
-    <p><a href="#excluir-conta">Veja como solicitar a exclusão da conta e dos dados</a>.
-      Não é necessário ter o jogo instalado para iniciar a solicitação.</p>
+    <p>No jogo, em <strong>OPÇÕES → CONTA → excluir dados / conta</strong>, ou na web, em
+      <a href="https://hipercombo.com.br/conta/excluir">hipercombo.com.br/conta/excluir</a>.
+      A exclusão é imediata. <a href="#excluir-conta">Veja os detalhes</a>.
+      Não é necessário ter o jogo instalado para excluir pela web.</p>
   </div>
 
   <h2>1. Quais dados o jogo trata</h2>
 
   <h3>1.1 Conta de jogo e ranking online</h3>
   <p>
-    Os recursos online usam <strong>Google Firebase Authentication</strong> e
-    <strong>Firebase Realtime Database</strong>. Consultar o ranking sem criar
-    uma conta de jogo pode gerar uma sessão técnica anônima no Firebase.
-    Para enviar suas pontuações, você precisa escolher <strong>CRIAR CONTA</strong>
-    ou restaurar uma conta existente. Apenas estar conectado não ativa o envio
-    de pontuações de um jogador sem conta.
+    A conta, o ranking, o Versus e o save na nuvem usam o <strong>serviço de
+    contas do Hipercombo</strong> (a API <code>api-apps.hipercombo.com.br</code>,
+    com os dados guardados no <strong>Supabase</strong>). No primeiro uso com
+    conexão, o jogo cria em segundo plano uma <strong>conta de convidado</strong>
+    (uma conta anônima, sem nome nem e-mail) com um apelido gerado, que você
+    pode trocar. As pontuações das corridas são enviadas ao ranking com essa
+    conta. Em <strong>OPÇÕES → CONTA</strong>, você pode entrar com o
+    <strong>Google</strong>: o progresso do convidado passa para a sua conta
+    Hipercombo, e o Google fornece a ela os dados descritos na
+    <a href="https://hipercombo.com.br/privacidade">Política de Privacidade do
+    Hipercombo</a> (nome, e-mail e foto de perfil). A mesma conta Hipercombo
+    vale no site <code>hipercombo.com.br</code> e no SwipeQuiz.
   </p>
   <table>
     <tr><th scope="col">Dado</th><th scope="col">Para quê</th></tr>
-    <tr><td>Apelido escolhido e sua reserva de nome; o nome digitado tem até 12 caracteres e pode receber um sufixo para evitar duplicidade</td><td>Identificar o jogador no placar e permitir a troca de apelido</td></tr>
-    <tr><td>Identificador de usuário do Firebase, credenciais técnicas derivadas do código de recuperação e tokens de autenticação</td><td>Autenticar, proteger e recuperar a conta de jogo</td></tr>
+    <tr><td>Apelido (o nick da conta Hipercombo: de 3 a 20 letras minúsculas, números e hífens, único)</td><td>Identificar o jogador no placar e permitir a troca de apelido</td></tr>
+    <tr><td>Identificador da conta Hipercombo, token de acesso do aparelho (o servidor guarda só o resumo SHA-256 dele) e um identificador aleatório do aparelho, gerado pelo jogo, enviado ao criar a conta de convidado</td><td>Autenticar e proteger a conta de jogo e limitar a criação de contas de convidado</td></tr>
+    <tr><td>Com a conta Google: o progresso do jogo (recorde, moedas, itens, cosméticos, estatísticas, conquistas, missões e duelos recentes)</td><td>Salvar o progresso na nuvem e levá-lo a outro aparelho</td></tr>
     <tr><td>Distância, passos da simulação e moedas obtidas na corrida</td><td>Registrar pontuações e verificar a plausibilidade da corrida; os passos são da simulação do jogo, não um pedômetro</td></tr>
     <tr><td>Período do placar ou data do desafio diário</td><td>Separar os resultados globais, semanais, mensais e do desafio diário</td></tr>
   </table>
   <p>
-    O código de recuperação de oito caracteres é uma <strong>credencial de
-    acesso</strong>. O jogo o utiliza para formar um identificador técnico em
-    formato de e-mail e uma senha de autenticação no Firebase; não é seu e-mail
-    pessoal. Esses dados identificam uma conta de forma pseudônima, e não devem
-    ser tratados como dados totalmente anônimos. <strong>Guarde o código e não
-    o compartilhe.</strong> Ele não aparece no ranking.
+    A conta de convidado identifica o jogador de forma pseudônima, e não deve
+    ser tratada como dado totalmente anônimo. O token de acesso fica no
+    aparelho e não aparece no ranking. As estatísticas e conquistas do jogo
+    também podem aparecer, como cópia para exibição, no seu perfil do
+    Hipercombo.
+  </p>
+  <p>
+    Os dados do SPECTRUM antigo guardados no <strong>Google Firebase</strong>
+    (contas, apelidos, códigos de recuperação, marcas de ranking e Versus)
+    <strong>não foram migrados</strong> para a conta Hipercombo e serão apagados
+    quando o Firebase do jogo for desligado. Só o progresso guardado no próprio
+    aparelho é importado pela versão atual.
   </p>
   <p>
     O apelido e a pontuação são públicos nos placares; os registros consultáveis
@@ -85,13 +102,14 @@
     posterior, inclusive ao reabrir o jogo.
   </p>
   <p>
-    O Firebase também pode tratar endereço IP, informações do cliente de conexão
-    e registros técnicos para autenticação, segurança e prevenção de abuso.
+    O serviço de contas do Hipercombo e o Supabase também podem tratar endereço
+    IP, informações do cliente de conexão e registros técnicos para
+    autenticação, segurança e prevenção de abuso.
   </p>
 
   <h3>1.2 Versus e convites</h3>
   <p>
-    Ao criar ou entrar em um duelo, o Firebase recebe o identificador dos
+    Ao criar ou entrar em um duelo, o serviço de contas do Hipercombo recebe o identificador dos
     participantes, apelidos, visual do personagem com os cosméticos equipados,
     código do convite, horários de criação e entrada, versão e dados técnicos da
     partida, além dos resultados de cada jogador: distância, passos da simulação
@@ -100,7 +118,7 @@
   <p>
     Quem conhece o convite e acessa o serviço pode consultar os dados do duelo;
     não o trate como uma conversa privada. O convite de seis caracteres é
-    diferente do código de recuperação da conta. O botão <strong>COPIAR</strong>
+    diferente do token de acesso da conta. O botão <strong>COPIAR</strong>
     coloca o convite na área de transferência do aparelho; você decide para
     quem enviá-lo em outro aplicativo. O jogo não lê sua agenda nem envia
     mensagens aos seus contatos.
@@ -140,7 +158,9 @@
     preços e ofertas, estado da compra e tokens de transação para entregar
     produtos, confirmar ou consumir compras e consultar direitos recuperáveis.
     Esses dados de compra não são publicados no ranking nem enviados pelo jogo
-    ao banco de pontuações do Firebase.
+    ao banco de pontuações. Com a conta Google, os tokens das compras já
+    creditadas (para a mesma compra não ser creditada duas vezes) e o direito
+    de remoção de anúncios fazem parte do progresso salvo na nuvem.
   </p>
   <p>
     Não recebemos dados completos do cartão, credenciais bancárias ou a senha
@@ -161,11 +181,11 @@
     equipado é compartilhado nos duelos, como explicado acima.
   </p>
   <p>
-    As conquistas atuais são medalhas locais, sem recompensa em moedas e
-    <strong>sem sincronização com Google Play Games ou Firebase</strong>.
-    Recuperar a conta pelo código restaura o apelido e o recorde online; não
-    restaura o saldo de moedas, inventário, missões ou histórico completo de
-    conquistas. Direitos de compras recuperáveis são consultados separadamente
+    As conquistas não dão recompensa em moedas. O progresso delas fica no
+    aparelho e é enviado ao <strong>Google Play Games</strong> quando o login
+    do Play Games está disponível. Entrar com a mesma conta Google em outro
+    aparelho restaura o progresso salvo na nuvem; a conta de convidado não tem
+    save na nuvem. Direitos de compras recuperáveis são consultados separadamente
     no Google Play.
   </p>
   <p>
@@ -181,7 +201,7 @@
     Se você entrar em contato conosco, trataremos seu endereço de e-mail,
     nome informado, mensagem e eventuais anexos para responder, identificar
     o pedido e atender seus direitos. Envie apenas o necessário; não envie
-    senhas, dados de cartão ou o código de recuperação da conta.
+    senhas ou dados de cartão.
   </p>
   <p>
     Esta política está hospedada no <strong>GitHub Pages</strong>. Ao visitá-la,
@@ -192,7 +212,7 @@
 
   <h2>2. Como usamos os dados</h2>
   <ul>
-    <li>Fornecer a conta opcional, autenticação, recuperação e placares globais, semanais, mensais e do desafio diário;</li>
+    <li>Fornecer a conta de jogo (convidado ou Google), autenticação, o save na nuvem e placares globais, semanais, mensais e do desafio diário;</li>
     <li>Operar convites, partidas e resultados do Versus;</li>
     <li>Manter o progresso local e as preferências do jogador;</li>
     <li>Verificar pontuações e prevenir abuso ou fraude;</li>
@@ -210,8 +230,10 @@
 
   <h2>3. Com quem os dados são compartilhados</h2>
   <p>
-    Utilizamos <strong>Google Firebase</strong> para autenticação, ranking e
-    Versus, <strong>Google AdMob e UMP</strong> para anúncios e consentimento,
+    Utilizamos o <strong>serviço de contas do Hipercombo</strong>, com os dados
+    no <strong>Supabase</strong>, para conta, ranking, Versus e save na nuvem,
+    o <strong>login do Google</strong> para quem escolhe entrar com o Google,
+    <strong>Google AdMob e UMP</strong> para anúncios e consentimento,
     <strong>Google Play</strong> para compras e <strong>GitHub Pages</strong>
     para esta política. Os dados enviados ao suporte também são tratados pelo
     serviço de e-mail utilizado no atendimento.
@@ -226,7 +248,9 @@
 
   <h2>4. Serviços de terceiros</h2>
   <ul>
-    <li>Google (Firebase, AdMob, Play) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a></li>
+    <li>Hipercombo (conta, ranking, Versus e save na nuvem) — <a href="https://hipercombo.com.br/privacidade" target="_blank" rel="noopener">Política de Privacidade do Hipercombo</a></li>
+    <li>Supabase — <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Supabase</a></li>
+    <li>Google (login, AdMob, Play, e o Firebase com os dados do SPECTRUM antigo) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a></li>
     <li>Firebase — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidade, segurança e retenção de dados</a></li>
     <li>AdMob — <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener">Dados tratados pelo SDK de anúncios</a></li>
     <li>Como o Google usa dados de apps parceiros — <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Uso de dados em serviços parceiros</a></li>
@@ -240,13 +264,13 @@
     armazenamento do Android ou desinstalando o jogo. Backups e cópias
     transferidas devem ser gerenciados pelos controles do sistema ou do
     provedor responsável. <strong>Limpar dados ou desinstalar não exclui a
-    conta e os registros online do Firebase</strong>, nem o histórico de
-    compras mantido pelo Google Play.
+    conta e os registros online</strong> (para isso, veja a seção 5.3), nem o
+    histórico de compras mantido pelo Google Play.
   </p>
   <h3>5.2 Dados online</h3>
   <p>
     Dados de autenticação, perfil, reservas de apelido, placares e duelos
-    permanecem nos serviços online até a exclusão solicitada ou uma limpeza
+    permanecem nos serviços online até a exclusão (seção 5.3) ou uma limpeza
     administrativa. O fim de um período do placar ou a expiração de um convite
     não significa apagamento automático dos registros. Registros de suporte
     são mantidos para atender e acompanhar as solicitações e eventuais
@@ -259,7 +283,38 @@
     Google, GitHub ou os registros que esses provedores devem manter
     independentemente do jogo.
   </p>
-  <h3 id="excluir-conta">5.3 Solicitar exclusão da conta e dos dados</h3>
+  <h3 id="excluir-conta">5.3 Excluir a conta e os dados</h3>
+  <p>
+    <strong>No jogo:</strong> em <strong>OPÇÕES → CONTA → excluir dados /
+    conta</strong>. <strong>Na web:</strong> em
+    <a href="https://hipercombo.com.br/conta/excluir">https://hipercombo.com.br/conta/excluir</a>,
+    entrando com a sua conta Google. A exclusão é <strong>imediata</strong> e
+    não tem volta. Há duas opções:
+  </p>
+  <ul>
+    <li><strong>Os dados deste jogo</strong> (<strong>APAGAR DADOS DO SPECTRUM</strong>):
+      apaga do servidor o progresso salvo na nuvem, as estatísticas e conquistas do
+      jogo que aparecem no seu perfil do Hipercombo, as partidas enviadas que ainda
+      não viraram XP, as suas marcas no ranking, os duelos do Versus em que você
+      jogou (o outro jogador perde aquele duelo do histórico) e o vínculo dos
+      aparelhos com o SPECTRUM. A conta Hipercombo, o site e o SwipeQuiz ficam.</li>
+    <li><strong>A conta Hipercombo inteira</strong> (<strong>EXCLUIR CONTA
+      HIPERCOMBO</strong>, com uma segunda confirmação): apaga a conta com tudo o
+      que está ligado a ela no site <code>hipercombo.com.br</code>, no SPECTRUM e
+      no SwipeQuiz.</li>
+  </ul>
+  <p>
+    Na conta de convidado, a tela tem só <strong>APAGAR MEUS DADOS</strong>, que
+    apaga a conta de convidado inteira e os dados dela no servidor. Excluindo
+    pelo jogo, o progresso do aparelho também é apagado (recorde, moedas,
+    inclusive as compradas, itens e placares); idioma, som, controles e a escolha
+    de anúncios ficam, e a remoção de anúncios comprada continua valendo pelo
+    Google Play. Excluindo pela web, o progresso salvo num aparelho continua
+    nele até ser excluído pelo jogo ou o jogo ser desinstalado.
+  </p>
+  <p>
+    Se não conseguir excluir pelo jogo nem pela web, peça por e-mail:
+  </p>
   <div class="card">
     <p><strong>SPECTRUM — Brazil Games Studio</strong></p>
     <p><a href="mailto:brazilgamesstudio@gmail.com?subject=SPECTRUM%20-%20Exclusao%20de%20conta%20e%20dados">Solicitar exclusão por e-mail</a></p>
@@ -269,23 +324,21 @@
   </div>
   <ol>
     <li>Informe seu apelido no jogo, incluindo eventual sufixo, e se deseja excluir a conta inteira ou solicitar a exclusão de dados específicos.</li>
-    <li>Não envie senhas, dados de pagamento ou o código de recuperação. Podemos pedir informações mínimas para confirmar a titularidade e evitar a exclusão da conta de outra pessoa.</li>
-    <li>Responderemos por e-mail para confirmar o pedido, esclarecer seu alcance e informar o prazo aplicável. A exclusão não é instantânea e será tratada nos prazos exigidos pela legislação aplicável.</li>
+    <li>Não envie senhas ou dados de pagamento. Podemos pedir informações mínimas para confirmar a titularidade e evitar a exclusão da conta de outra pessoa.</li>
+    <li>Responderemos por e-mail para confirmar o pedido, esclarecer seu alcance e informar o prazo aplicável. O pedido por e-mail não é instantâneo e será tratado nos prazos exigidos pela legislação aplicável.</li>
   </ol>
   <p>
-    Na exclusão da conta, o pedido abrange a identidade de autenticação no
-    Firebase, perfil, reservas de apelido, pontuações e dados associados ao
+    Na exclusão da conta, a exclusão abrange a identidade de autenticação da
+    conta Hipercombo, perfil, apelido, pontuações e dados associados ao
     jogador nos duelos, e não apenas a remoção de uma linha do ranking.
     Se alguma retenção for necessária por obrigação legal, segurança ou
     prevenção de fraude, informaremos quais dados, o motivo e o prazo aplicável.
   </p>
   <p>
-    Não é necessário reinstalar o jogo para iniciar o pedido. Se não lembrar
-    o apelido ou não tiver mais acesso ao aplicativo, explique a situação no
-    e-mail. No jogo, esta página pode ser aberta em
+    Não é necessário reinstalar o jogo para excluir pela web ou pedir por
+    e-mail. Se não lembrar o apelido ou não tiver mais acesso ao aplicativo,
+    explique a situação no e-mail. No jogo, esta página pode ser aberta em
     <strong>OPÇÕES → ANÚNCIOS → política de privacidade</strong>.
-    O procedimento atual é uma solicitação ao suporte, não uma exclusão
-    automática dentro do aplicativo.
   </p>
   <p>
     A exclusão da conta impede sua recuperação e não equivale a reembolso de
@@ -299,19 +352,19 @@
   <p>
     O SPECTRUM não é direcionado a menores de 13 anos. Não solicitamos nome
     civil, e-mail pessoal, telefone, contatos, fotos ou localização precisa para
-    jogar; isso não elimina o tratamento de identificadores e outros dados
-    descritos nesta política. Se você é responsável e acredita que uma criança
+    jogar (entrar com o Google é opcional); isso não elimina o tratamento de
+    identificadores e outros dados descritos nesta política. Se você é responsável e acredita que uma criança
     forneceu dados ao jogo, entre em contato para solicitar orientação e exclusão.
   </p>
 
   <h2>7. Segurança e alterações</h2>
   <p>
     As comunicações com os serviços online integrados usam HTTPS/TLS.
-    O Firebase utiliza autenticação e regras de acesso para proteger as
-    operações; os dados destinados ao ranking e aos convites continuam
+    O serviço de contas do Hipercombo exige o token de acesso da conta para
+    proteger as operações; os dados destinados ao ranking e aos convites continuam
     consultáveis conforme descrito nesta política. Não prometemos anonimato
     absoluto, criptografia de ponta a ponta ou segurança de 100%.
-    Proteja seu aparelho e seu código de recuperação.
+    Proteja seu aparelho.
   </p>
   <p>
     Podemos atualizar esta política para refletir mudanças reais no jogo e
